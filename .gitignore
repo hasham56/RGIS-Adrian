@@ -1,0 +1,9 @@
+node_modules
+dist
+
+# original prototype, superseded by this app — delete this line to commit it
+RGIS Universe (Standalone).html
+.env
+.env.*
+*.local
+.DS_Store
