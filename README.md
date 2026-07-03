@@ -84,3 +84,12 @@ git push -u origin main
    publish directory `dist`. Just click **Deploy site**.
 
 Every push to `main` will trigger a fresh deploy.
+
+### After the first deploy: fix the social-preview URLs
+
+`index.html` contains Open Graph tags so links shared on WhatsApp/iMessage/
+LinkedIn show a branded card (`public/og.jpg`). Those tags need **absolute**
+URLs, which are placeholders until you know your real address: replace
+`rgis-universe.netlify.app` in `index.html` with your actual Netlify URL (or
+custom domain), commit, and push. WhatsApp caches previews per URL — if you
+shared the link before fixing, test with `?v=2` appended to bust its cache.
